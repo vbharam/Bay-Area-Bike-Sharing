@@ -25,6 +25,7 @@ class MainViewController: UIViewController, MKMapViewDelegate, CLLocationManager
     var filteredData = [BikeStationViewModel]()
     var overLays = [MKCircle]()
     var currentLocation: CLLocationCoordinate2D!
+    let regionRadius: CLLocationDistance = 250
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +33,6 @@ class MainViewController: UIViewController, MKMapViewDelegate, CLLocationManager
         interactor = BikeStationInteractor()
 
         let initialLocation = CLLocation(latitude: Location.sharedInstance.latitude, longitude: Location.sharedInstance.latitude)
-        let regionRadius: CLLocationDistance = 250
         centerMapOnLocation(location: initialLocation, regionRadius: regionRadius)
     }
 
@@ -152,13 +152,20 @@ class MainViewController: UIViewController, MKMapViewDelegate, CLLocationManager
 
                 let spot = BikeStationViewModel(uid: 1000, stationName: icon, fullAddress: address, stationStatus: .All, location: location)
                 spot.subtitle = address
+                if icon == "Home" {
+                    self.centerMapOnLocation(location: location, regionRadius: CLLocationDistance(radius*5))
+                }
 
                 self.loadMapView(withCoord: coord, withRadius: radius, stations: bikeStations + [spot], withIcon: icon)
             } else {
                 self.present(UIAlertController(title: "Eroor", message: "Bike station data is not available", preferredStyle: .alert), animated: true)
             }
         }
-
     }
+
+    @IBAction func resetToMyLocation(_ sender: Any) {
+        centerMapOnLocation(location: Location.sharedInstance.currentLocation!, regionRadius: regionRadius*3)
+    }
+
 }
 

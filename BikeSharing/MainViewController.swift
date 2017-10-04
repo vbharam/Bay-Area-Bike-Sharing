@@ -87,7 +87,7 @@ class MainViewController: UIViewController, MKMapViewDelegate, CLLocationManager
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView,
                  calloutAccessoryControlTapped control: UIControl) {
         let location = view.annotation as! BikeStationViewModel
-        let launchOptions = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDefault]
+        let launchOptions = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeWalking]
         location.mapItem().openInMaps(launchOptions: launchOptions)
     }
 

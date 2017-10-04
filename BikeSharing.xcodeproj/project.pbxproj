@@ -7,13 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		35FD3FD2C154C8F482D8C407 /* Pods_BikeSharing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 578F38D6A2CE427BBA51D34A /* Pods_BikeSharing.framework */; };
 		85818CB81F80AF7E00D6888C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85818CB71F80AF7E00D6888C /* AppDelegate.swift */; };
-		85818CBA1F80AF7E00D6888C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85818CB91F80AF7E00D6888C /* ViewController.swift */; };
+		85818CBA1F80AF7E00D6888C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85818CB91F80AF7E00D6888C /* MainViewController.swift */; };
 		85818CBD1F80AF7E00D6888C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85818CBB1F80AF7E00D6888C /* Main.storyboard */; };
 		85818CBF1F80AF7E00D6888C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85818CBE1F80AF7E00D6888C /* Assets.xcassets */; };
 		85818CC21F80AF7E00D6888C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85818CC01F80AF7E00D6888C /* LaunchScreen.storyboard */; };
 		85818CCD1F80AF7E00D6888C /* BikeSharingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85818CCC1F80AF7E00D6888C /* BikeSharingTests.swift */; };
 		85818CD81F80AF7E00D6888C /* BikeSharingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85818CD71F80AF7E00D6888C /* BikeSharingUITests.swift */; };
+		85818CE61F80B2D800D6888C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85818CE51F80B2D800D6888C /* Constants.swift */; };
+		85818CE81F80B82800D6888C /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85818CE71F80B82800D6888C /* Location.swift */; };
+		85818CEC1F80C5A400D6888C /* JsonService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85818CEB1F80C5A400D6888C /* JsonService.swift */; };
+		85818CEE1F80CBF900D6888C /* EnableLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85818CED1F80CBF900D6888C /* EnableLocationViewController.swift */; };
+		85818CF11F80CC7600D6888C /* EnableLocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85818CF01F80CC7600D6888C /* EnableLocationCell.swift */; };
+		85818CF51F81801700D6888C /* BikeStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85818CF41F81801700D6888C /* BikeStation.swift */; };
+		85818CF71F81842A00D6888C /* BikeStationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85818CF61F81842A00D6888C /* BikeStationInteractor.swift */; };
+		85818CFE1F81BC1F00D6888C /* MaterialButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85818CFB1F81BC1F00D6888C /* MaterialButtonView.swift */; };
+		85818CFF1F81BC1F00D6888C /* MaterialTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85818CFC1F81BC1F00D6888C /* MaterialTextField.swift */; };
+		85818D001F81BC1F00D6888C /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85818CFD1F81BC1F00D6888C /* MaterialView.swift */; };
+		85818D101F83ED5B00D6888C /* BikeStationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85818D0F1F83ED5B00D6888C /* BikeStationViewModel.swift */; };
+		8F29590F5D32273BE8033B38 /* Pods_BikeSharingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3828B0D6B46C9CD9ECD60587 /* Pods_BikeSharingUITests.framework */; };
+		FA1DFF558B1D1F5260C4D0CD /* Pods_BikeSharingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 091B01392D5FC58E234FE20D /* Pods_BikeSharingTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +48,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		091B01392D5FC58E234FE20D /* Pods_BikeSharingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BikeSharingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3828B0D6B46C9CD9ECD60587 /* Pods_BikeSharingUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BikeSharingUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FBDAFC0414B1C64703256E0 /* Pods-BikeSharingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BikeSharingTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BikeSharingTests/Pods-BikeSharingTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4169AD8F141A607E1F645C35 /* Pods-BikeSharingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BikeSharingTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BikeSharingTests/Pods-BikeSharingTests.release.xcconfig"; sourceTree = "<group>"; };
+		521E73D48D2D9CE2A418889A /* Pods-BikeSharingUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BikeSharingUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BikeSharingUITests/Pods-BikeSharingUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		578F38D6A2CE427BBA51D34A /* Pods_BikeSharing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BikeSharing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		667E4D0811AAE4737588BEEB /* Pods-BikeSharing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BikeSharing.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BikeSharing/Pods-BikeSharing.debug.xcconfig"; sourceTree = "<group>"; };
 		85818CB41F80AF7E00D6888C /* BikeSharing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BikeSharing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85818CB71F80AF7E00D6888C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		85818CB91F80AF7E00D6888C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		85818CB91F80AF7E00D6888C /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		85818CBC1F80AF7E00D6888C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		85818CBE1F80AF7E00D6888C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		85818CC11F80AF7E00D6888C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +68,19 @@
 		85818CD31F80AF7E00D6888C /* BikeSharingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BikeSharingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		85818CD71F80AF7E00D6888C /* BikeSharingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikeSharingUITests.swift; sourceTree = "<group>"; };
 		85818CD91F80AF7E00D6888C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85818CE51F80B2D800D6888C /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		85818CE71F80B82800D6888C /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		85818CEB1F80C5A400D6888C /* JsonService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonService.swift; sourceTree = "<group>"; };
+		85818CED1F80CBF900D6888C /* EnableLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnableLocationViewController.swift; sourceTree = "<group>"; };
+		85818CF01F80CC7600D6888C /* EnableLocationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnableLocationCell.swift; sourceTree = "<group>"; };
+		85818CF41F81801700D6888C /* BikeStation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BikeStation.swift; sourceTree = "<group>"; };
+		85818CF61F81842A00D6888C /* BikeStationInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BikeStationInteractor.swift; sourceTree = "<group>"; };
+		85818CFB1F81BC1F00D6888C /* MaterialButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialButtonView.swift; sourceTree = "<group>"; };
+		85818CFC1F81BC1F00D6888C /* MaterialTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialTextField.swift; sourceTree = "<group>"; };
+		85818CFD1F81BC1F00D6888C /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
+		85818D0F1F83ED5B00D6888C /* BikeStationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BikeStationViewModel.swift; sourceTree = "<group>"; };
+		AFBEA5E12A937A2E0A1F9D1C /* Pods-BikeSharingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BikeSharingUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BikeSharingUITests/Pods-BikeSharingUITests.release.xcconfig"; sourceTree = "<group>"; };
+		CC4265C0FF4986DBCDDCE51E /* Pods-BikeSharing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BikeSharing.release.xcconfig"; path = "Pods/Target Support Files/Pods-BikeSharing/Pods-BikeSharing.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35FD3FD2C154C8F482D8C407 /* Pods_BikeSharing.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA1DFF558B1D1F5260C4D0CD /* Pods_BikeSharingTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F29590F5D32273BE8033B38 /* Pods_BikeSharingUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +118,8 @@
 				85818CCB1F80AF7E00D6888C /* BikeSharingTests */,
 				85818CD61F80AF7E00D6888C /* BikeSharingUITests */,
 				85818CB51F80AF7E00D6888C /* Products */,
+				E35A6CB5A59D87235CB21466 /* Pods */,
+				93C8BF701C496D5D3FC2969A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,11 +136,13 @@
 		85818CB61F80AF7E00D6888C /* BikeSharing */ = {
 			isa = PBXGroup;
 			children = (
+				85818CEF1F80CC6D00D6888C /* View */,
+				85818CEA1F80C55D00D6888C /* Controller */,
+				85818D191F843B6500D6888C /* Model */,
+				85818CE91F80C55500D6888C /* Interactor */,
+				85818D1A1F843B7F00D6888C /* Util */,
 				85818CB71F80AF7E00D6888C /* AppDelegate.swift */,
-				85818CB91F80AF7E00D6888C /* ViewController.swift */,
-				85818CBB1F80AF7E00D6888C /* Main.storyboard */,
 				85818CBE1F80AF7E00D6888C /* Assets.xcassets */,
-				85818CC01F80AF7E00D6888C /* LaunchScreen.storyboard */,
 				85818CC31F80AF7E00D6888C /* Info.plist */,
 			);
 			path = BikeSharing;
@@ -125,6 +166,78 @@
 			path = BikeSharingUITests;
 			sourceTree = "<group>";
 		};
+		85818CE91F80C55500D6888C /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				85818CEB1F80C5A400D6888C /* JsonService.swift */,
+				85818CF61F81842A00D6888C /* BikeStationInteractor.swift */,
+			);
+			name = Interactor;
+			sourceTree = "<group>";
+		};
+		85818CEA1F80C55D00D6888C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				85818CED1F80CBF900D6888C /* EnableLocationViewController.swift */,
+				85818CB91F80AF7E00D6888C /* MainViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		85818CEF1F80CC6D00D6888C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				85818CBB1F80AF7E00D6888C /* Main.storyboard */,
+				85818CC01F80AF7E00D6888C /* LaunchScreen.storyboard */,
+				85818CF01F80CC7600D6888C /* EnableLocationCell.swift */,
+				85818CFB1F81BC1F00D6888C /* MaterialButtonView.swift */,
+				85818CFC1F81BC1F00D6888C /* MaterialTextField.swift */,
+				85818CFD1F81BC1F00D6888C /* MaterialView.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		85818D191F843B6500D6888C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				85818CE71F80B82800D6888C /* Location.swift */,
+				85818CF41F81801700D6888C /* BikeStation.swift */,
+				85818D0F1F83ED5B00D6888C /* BikeStationViewModel.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		85818D1A1F843B7F00D6888C /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				85818CE51F80B2D800D6888C /* Constants.swift */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+		93C8BF701C496D5D3FC2969A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				578F38D6A2CE427BBA51D34A /* Pods_BikeSharing.framework */,
+				091B01392D5FC58E234FE20D /* Pods_BikeSharingTests.framework */,
+				3828B0D6B46C9CD9ECD60587 /* Pods_BikeSharingUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E35A6CB5A59D87235CB21466 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				667E4D0811AAE4737588BEEB /* Pods-BikeSharing.debug.xcconfig */,
+				CC4265C0FF4986DBCDDCE51E /* Pods-BikeSharing.release.xcconfig */,
+				3FBDAFC0414B1C64703256E0 /* Pods-BikeSharingTests.debug.xcconfig */,
+				4169AD8F141A607E1F645C35 /* Pods-BikeSharingTests.release.xcconfig */,
+				521E73D48D2D9CE2A418889A /* Pods-BikeSharingUITests.debug.xcconfig */,
+				AFBEA5E12A937A2E0A1F9D1C /* Pods-BikeSharingUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +245,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 85818CDC1F80AF7E00D6888C /* Build configuration list for PBXNativeTarget "BikeSharing" */;
 			buildPhases = (
+				1852C21AAD3B23184207AC81 /* [CP] Check Pods Manifest.lock */,
 				85818CB01F80AF7E00D6888C /* Sources */,
 				85818CB11F80AF7E00D6888C /* Frameworks */,
 				85818CB21F80AF7E00D6888C /* Resources */,
+				76326AF6512BF91B0509483A /* [CP] Embed Pods Frameworks */,
+				3A0B56C939419FCB3E1F13F6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +265,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 85818CDF1F80AF7E00D6888C /* Build configuration list for PBXNativeTarget "BikeSharingTests" */;
 			buildPhases = (
+				FF4109ECDFBEC026A051FFC6 /* [CP] Check Pods Manifest.lock */,
 				85818CC41F80AF7E00D6888C /* Sources */,
 				85818CC51F80AF7E00D6888C /* Frameworks */,
 				85818CC61F80AF7E00D6888C /* Resources */,
+				DAB81316C76EA24AF36BCF6F /* [CP] Embed Pods Frameworks */,
+				F9831A937796CA2C8A14AED0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +286,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 85818CE21F80AF7E00D6888C /* Build configuration list for PBXNativeTarget "BikeSharingUITests" */;
 			buildPhases = (
+				49FD31C70C9A8398541FD680 /* [CP] Check Pods Manifest.lock */,
 				85818CCF1F80AF7E00D6888C /* Sources */,
 				85818CD01F80AF7E00D6888C /* Frameworks */,
 				85818CD11F80AF7E00D6888C /* Resources */,
+				D0FCAF57CFE2BFFEF3C7F7DB /* [CP] Embed Pods Frameworks */,
+				3854708922A440CCAA0E9125 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -257,13 +379,162 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1852C21AAD3B23184207AC81 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		3854708922A440CCAA0E9125 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BikeSharingUITests/Pods-BikeSharingUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3A0B56C939419FCB3E1F13F6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BikeSharing/Pods-BikeSharing-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		49FD31C70C9A8398541FD680 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		76326AF6512BF91B0509483A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BikeSharing/Pods-BikeSharing-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D0FCAF57CFE2BFFEF3C7F7DB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BikeSharingUITests/Pods-BikeSharingUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DAB81316C76EA24AF36BCF6F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BikeSharingTests/Pods-BikeSharingTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F9831A937796CA2C8A14AED0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BikeSharingTests/Pods-BikeSharingTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF4109ECDFBEC026A051FFC6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		85818CB01F80AF7E00D6888C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85818CBA1F80AF7E00D6888C /* ViewController.swift in Sources */,
+				85818CF71F81842A00D6888C /* BikeStationInteractor.swift in Sources */,
+				85818D101F83ED5B00D6888C /* BikeStationViewModel.swift in Sources */,
+				85818CFE1F81BC1F00D6888C /* MaterialButtonView.swift in Sources */,
+				85818CEC1F80C5A400D6888C /* JsonService.swift in Sources */,
+				85818D001F81BC1F00D6888C /* MaterialView.swift in Sources */,
+				85818CFF1F81BC1F00D6888C /* MaterialTextField.swift in Sources */,
+				85818CF51F81801700D6888C /* BikeStation.swift in Sources */,
+				85818CF11F80CC7600D6888C /* EnableLocationCell.swift in Sources */,
+				85818CBA1F80AF7E00D6888C /* MainViewController.swift in Sources */,
+				85818CEE1F80CBF900D6888C /* EnableLocationViewController.swift in Sources */,
 				85818CB81F80AF7E00D6888C /* AppDelegate.swift in Sources */,
+				85818CE81F80B82800D6888C /* Location.swift in Sources */,
+				85818CE61F80B2D800D6888C /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,6 +686,7 @@
 		};
 		85818CDD1F80AF7E00D6888C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 667E4D0811AAE4737588BEEB /* Pods-BikeSharing.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = G87HSJL39V;
@@ -428,6 +700,7 @@
 		};
 		85818CDE1F80AF7E00D6888C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC4265C0FF4986DBCDDCE51E /* Pods-BikeSharing.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = G87HSJL39V;
@@ -441,6 +714,7 @@
 		};
 		85818CE01F80AF7E00D6888C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3FBDAFC0414B1C64703256E0 /* Pods-BikeSharingTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -456,6 +730,7 @@
 		};
 		85818CE11F80AF7E00D6888C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4169AD8F141A607E1F645C35 /* Pods-BikeSharingTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -471,6 +746,7 @@
 		};
 		85818CE31F80AF7E00D6888C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 521E73D48D2D9CE2A418889A /* Pods-BikeSharingUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = G87HSJL39V;
@@ -485,6 +761,7 @@
 		};
 		85818CE41F80AF7E00D6888C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AFBEA5E12A937A2E0A1F9D1C /* Pods-BikeSharingUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = G87HSJL39V;
@@ -516,6 +793,7 @@
 				85818CDE1F80AF7E00D6888C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		85818CDF1F80AF7E00D6888C /* Build configuration list for PBXNativeTarget "BikeSharingTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +802,7 @@
 				85818CE11F80AF7E00D6888C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		85818CE21F80AF7E00D6888C /* Build configuration list for PBXNativeTarget "BikeSharingUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +811,7 @@
 				85818CE41F80AF7E00D6888C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

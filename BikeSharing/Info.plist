@@ -41,5 +41,14 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>googlechromes</string>
+		<string>comgooglemaps</string>
+	</array>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Allow access to your location to retrieve nearby bike stations</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Allow access to your location to retrieve nearby bike stations</string>
 </dict>
 </plist>

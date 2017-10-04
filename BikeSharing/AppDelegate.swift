@@ -7,16 +7,47 @@
 //
 
 import UIKit
+import CoreLocation
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    let locationManager = CLLocationManager()
+    var currentLocation: CLLocation!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+
+        // Location Authorization
+        self.locationManager.delegate = self
+        self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        self.locationManager.requestWhenInUseAuthorization()
+        self.locationManager.startMonitoringSignificantLocationChanges()
+
+        self.checkAuthorization(for: CLLocationManager.authorizationStatus())
+
         return true
+    }
+
+    // MARK: - CLLocationManagerDelegate
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        self.checkAuthorization(for: status)
+    }
+
+    private func checkAuthorization(for status: CLAuthorizationStatus) {
+        switch status {
+        case .authorizedAlways, .authorizedWhenInUse:
+            self.currentLocation = self.locationManager.location
+        case .notDetermined:
+            self.locationManager.requestWhenInUseAuthorization()
+        case .denied, .restricted:
+            // Give alert
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let enableLocationVC = storyboard.instantiateViewController(withIdentifier: "enableLocation") as! EnableLocationViewController
+
+            self.window?.rootViewController = enableLocationVC
+            self.window?.makeKeyAndVisible()
+        }
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
@@ -41,6 +72,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+
+}
+
+extension AppDelegate: CLLocationManagerDelegate {
 
 }
 

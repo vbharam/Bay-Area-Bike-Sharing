@@ -65,6 +65,11 @@ class MainViewController: UIViewController, MKMapViewDelegate, CLLocationManager
         if let dequeuedView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
             as? MKPinAnnotationView {
             dequeuedView.annotation = annotation
+            if annotation.title == "Home" ||  annotation.title == "Destination" {
+                dequeuedView.pinTintColor = UIColor.purple
+            } else {
+                dequeuedView.pinTintColor = annotation.markerTintColor
+            }
             view = dequeuedView
         } else {
             view = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
@@ -126,10 +131,10 @@ class MainViewController: UIViewController, MKMapViewDelegate, CLLocationManager
                 self.mapView.removeOverlays(self.overLays)
 
                 let home = locations[0]
-                self.updateUI(withLat: (home.coordinate.latitude), andLong: (home.coordinate.longitude), withRadius: radius, withIcon: "Home")
+                self.updateUI(withLocation: CLLocation(latitude: home.coordinate.latitude, longitude: home.coordinate.longitude), withAddress: sourceAddress, withRadius: radius, withIcon: "Home")
 
                 let dest = locations[1]
-                self.updateUI(withLat: (dest.coordinate.latitude), andLong: (dest.coordinate.longitude), withRadius: radius, withIcon: "Star")
+                self.updateUI(withLocation: CLLocation(latitude: dest.coordinate.latitude, longitude: dest.coordinate.longitude), withAddress: destAddress, withRadius: radius, withIcon: "Destination")
             } else {
                 let alertVC = UIAlertController(title: "Invalid Address", message: "Please Confirm both addresses", preferredStyle: .alert)
                 alertVC.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
@@ -139,19 +144,16 @@ class MainViewController: UIViewController, MKMapViewDelegate, CLLocationManager
     }
 
 
-    func updateUI(withLat lat: Double, andLong long: Double, withRadius radius: Float, withIcon icon: String) {
+    func updateUI(withLocation location: CLLocation, withAddress address: String, withRadius radius: Float, withIcon icon: String) {
 
-        interactor.getBikeStationsWithinBounds(lat1: lat, long1: long, radius: radius) { (bikeStations, status) in
+        interactor.getBikeStationsWithinBounds(lat1: location.coordinate.latitude, long1: location.coordinate.longitude, radius: radius) { (bikeStations, status) in
             if status == .success {
-                let coord = CLLocationCoordinate2D(latitude: lat, longitude: long)
+                let coord = location.coordinate
 
-                // custom Pin:
-                let pointAnnotation = MKPointAnnotation()
-                pointAnnotation.coordinate = coord
-                pointAnnotation.title = icon == "Home" ? icon : "Destination"
-                self.mapView.addAnnotation(pointAnnotation)
+                let spot = BikeStationViewModel(uid: 1000, stationName: icon, fullAddress: address, stationStatus: .All, location: location)
+                spot.subtitle = address
 
-                self.loadMapView(withCoord: coord, withRadius: radius, stations: bikeStations, withIcon: icon)
+                self.loadMapView(withCoord: coord, withRadius: radius, stations: bikeStations + [spot], withIcon: icon)
             } else {
                 self.present(UIAlertController(title: "Eroor", message: "Bike station data is not available", preferredStyle: .alert), animated: true)
             }

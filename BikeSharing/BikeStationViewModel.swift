@@ -28,7 +28,7 @@ class BikeStationViewModel: NSObject, MKAnnotation, Comparable {
         self.location = location
     }
 
-    // markerTintColor for disciplines: Sculpture, Plaque, Mural, Monument, other
+    // markerTintColor for types
     var markerTintColor: UIColor  {
         switch stationStatus {
         case .InService:
@@ -49,7 +49,7 @@ class BikeStationViewModel: NSObject, MKAnnotation, Comparable {
     var title: String? { return self.stationName }
 
     /// Description of activity. Alias of `self.desx`
-    var subtitle: String? { return "" }
+    var subtitle: String?
 
     func isAnnotation(_ annotation: MKAnnotation) -> Bool {
         if let bikeStation = annotation as? BikeStationViewModel {
